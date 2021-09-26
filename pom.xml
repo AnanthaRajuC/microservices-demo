@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>io.github.anantharajuc</groupId>
+	<artifactId>microservices-demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>microservices-demo</name>
+	<url>https://github.com/AnanthaRajuC/microservices-demo</url>
+	<description>Microservices Demo project for Spring Boot</description>
+
+	<!-- Start - microservices-demo Project Owner -->
+	<developers>
+		<developer>
+			<name>Anantha Raju C</name>
+			<email>arcswdev@gmail.com</email>
+			<timezone>UTC+05:30</timezone>
+		</developer>
+	</developers>
+	<!-- End - microservices-demo Project Owner -->
+
+	<!-- Start - microservices-demo source repository -->
+	<scm>
+		<connection>https://github.com/AnanthaRajuC/microservices-demo.git</connection>
+		<developerConnection>git@github.com:AnanthaRajuC/microservices-demo.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<!-- End - microservices-demo source repository -->
+
+	<!-- Start - microservices-demo issue management -->
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/AnanthaRajuC/microservices-demo/issues</url>
+	</issueManagement>
+	<!-- End - microservices-demo issue management -->
+
+	<properties>
+		<!--  Dependencies versions properties  -->
+		<java.version>11</java.version>
+        <spring-boot.version>2.5.5</spring-boot.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+				<!-- Package as an executable jar/war. -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+	</build>
+
+</project>
