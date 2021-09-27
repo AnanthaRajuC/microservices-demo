@@ -1,6 +1,6 @@
 package com.microservices.demo.twitter.to.kafka.listener;
 
-import com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication;
+import com.microservices.demo.twitter.to.kafka.TwitterToKafkaServiceApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
